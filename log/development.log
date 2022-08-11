@@ -219,3 +219,68 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 202ms (Views: 197.9ms | ActiveRecord: 0.0ms | Allocations: 98551)
 
 
+Started GET "/" for ::1 at 2022-08-11 20:37:38 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 192.4ms | Allocations: 97872)
+Completed 200 OK in 198ms (Views: 194.1ms | ActiveRecord: 0.0ms | Allocations: 101281)
+
+
+Started GET "/" for ::1 at 2022-08-11 20:38:29 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 37368)
+Completed 200 OK in 63ms (Views: 57.0ms | ActiveRecord: 0.0ms | Allocations: 40778)
+
+
+Started GET "/?vscodeBrowserReqId=1660261197977" for 127.0.0.1 at 2022-08-11 20:39:58 -0300
+Processing by StaticPagesController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1660261197977"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 44120)
+Completed 200 OK in 73ms (Views: 68.9ms | ActiveRecord: 0.0ms | Allocations: 47529)
+
+
+Started GET "/" for ::1 at 2022-08-11 20:40:18 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2561)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2897)
+
+
+Started GET "/" for ::1 at 2022-08-11 20:43:15 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 637.1ms | Allocations: 149872)
+Completed 200 OK in 644ms (Views: 638.9ms | ActiveRecord: 0.0ms | Allocations: 153281)
+
+
+Started GET "/?vscodeBrowserReqId=1660261401275" for 127.0.0.1 at 2022-08-11 20:43:21 -0300
+Processing by StaticPagesController#index as HTML
+  Parameters: {"vscodeBrowserReqId"=>"1660261401275"}
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 6221)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 6557)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:43:35 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 49020)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.0ms | Allocations: 52430)
+
+
