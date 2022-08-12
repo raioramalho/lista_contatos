@@ -4,6 +4,10 @@
     Gerencie seus contatos em qualquer lugar!
   </p>
   <p>
-    <%= link_to 'Crie Sua Conta', 'users/new', class: 'btn btn-primary btn-lg' %>
+  <% if !user_signed_in? %>
+    <%= link_to 'Crie sua Conta', 'users/new', class: 'btn btn-primary btn-lg' %>
+  <% else %>
+  <%= link_to 'Listar', '/contacts', class: 'btn btn-primary btn-lg' %>
+  <% end %>
   </p>
 </div>
