@@ -3176,3 +3176,54 @@ No template found for SessionsController#create, rendering head :no_content
 Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 358)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/entrar" for ::1 at 2022-08-12 18:18:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/raio/lista_contatos/app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/__web_console/repl_sessions/53492595993107553ea9eabc1669a3cf/trace" for ::1 at 2022-08-12 18:18:56 -0300
+Started GET "/entrar" for ::1 at 2022-08-12 18:19:21 -0300
+  
+SyntaxError (/home/raio/lista_contatos/app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/entrar" for ::1 at 2022-08-12 18:19:35 -0300
+  
+SyntaxError (/home/raio/lista_contatos/app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:11: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/entrar" for ::1 at 2022-08-12 18:19:39 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4975)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 248)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 41486)
+Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 0.0ms | Allocations: 43769)
+
+
+Started POST "/entrar" for ::1 at 2022-08-12 18:19:49 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"ramalho.sit@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ramalho.sit@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 7.7ms | Allocations: 10339)
+
+
