@@ -1,25 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# contact_list_rails
+Minha Primeira aplicação com ruby on rails!
+Uma lista de contatos com formulário de login e cadastro de usuarios. 
+Bootstrap sass
