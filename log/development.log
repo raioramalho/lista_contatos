@@ -812,3 +812,36 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 6818)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:18:05 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 309)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 50208)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 0.0ms | Allocations: 53612)
+
+
+Started GET "/" for ::1 at 2022-08-11 21:19:34 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 245)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 8448)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 9344)
+
+
+Started GET "/" for ::1 at 2022-08-11 21:19:41 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 245)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 250)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 8598)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 9452)
+
+
