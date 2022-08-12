@@ -1184,3 +1184,204 @@ Migrating to CreateUsers (20220812004229)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-08-11 21:46:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 37646)
+Completed 200 OK in 78ms (Views: 73.2ms | ActiveRecord: 0.0ms | Allocations: 41063)
+
+
+Started GET "/contato" for ::1 at 2022-08-11 21:46:33 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7582)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7992)
+
+
+Started GET "/sobre" for ::1 at 2022-08-11 21:46:34 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 7358)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 7683)
+
+
+Started GET "/contacs" for ::1 at 2022-08-11 21:46:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/contacs"):
+  
+Started GET "/contacts" for ::1 at 2022-08-11 21:46:40 -0300
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/_contact.html.erb (Duration: 0.6ms | Allocations: 262)
+  Rendered contacts/_contact.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered contacts/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 5812)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 13205)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 3.3ms | Allocations: 14800)
+
+
+Started GET "/" for ::1 at 2022-08-11 21:46:49 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 7345)
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 7650)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "nome", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ramalho.sit@gmail.com"], ["nome", ""], ["password_digest", "[FILTERED]"], ["created_at", "2022-08-12 00:48:35.547635"], ["updated_at", "2022-08-12 00:48:35.547635"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "nome" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["nome", "Alan"], ["updated_at", "2022-08-12 00:49:22.003719"], ["id", 1]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameOldTableToNewTable (20220812005305)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "nome" RENAME TO "name"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nome" = $1 LIMIT $2[0m  [["nome", "Alan"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameOldColumnToNewColumn (20220812005557)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "user" RENAME COLUMN "nome" TO "name"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameOldColumnToNewColumn (20220812005557)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "User" RENAME COLUMN "nome" TO "name"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."nome" = $1 LIMIT $2[0m  [["nome", "Alan"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnName (20220812005850)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" RENAME COLUMN "nome" TO "name"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220812005850"]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-08-11 21:59:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 37510)
+Completed 200 OK in 66ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 40927)
+
+
+Started GET "/" for ::1 at 2022-08-11 21:59:47 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 7472)
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 7807)
+
+
+Started GET "/contato" for ::1 at 2022-08-11 21:59:49 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 7378)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 7726)
+
+
+Started GET "/sobre" for ::1 at 2022-08-11 21:59:50 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 7349)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 7674)
+
+
+Started GET "/" for ::1 at 2022-08-11 21:59:51 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7373)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 7647)
+
+
+Started GET "/contacts" for ::1 at 2022-08-11 21:59:54 -0300
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.7ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/_contact.html.erb (Duration: 0.6ms | Allocations: 261)
+  Rendered contacts/_contact.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered contacts/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5824)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 13070)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 4.1ms | Allocations: 14653)
+
+
+Started GET "/users" for ::1 at 2022-08-11 21:59:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/user" for ::1 at 2022-08-11 22:00:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/" for ::1 at 2022-08-11 22:00:03 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 50)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 7548)
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 7859)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Alan"], ["LIMIT", 1]]
