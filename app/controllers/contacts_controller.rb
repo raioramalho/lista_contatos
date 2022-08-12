@@ -5,7 +5,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    #@contacts = Contact.all
+    @contacts = current_user.contacts #only user contacts
   end
 
   # GET /contacts/1 or /contacts/1.json
@@ -14,7 +15,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact = Contact.new
+    #@contact = Contact.new
+    @contact = current_user.contacts.build(contact_params)
   end
 
   # GET /contacts/1/edit
@@ -62,7 +64,8 @@ class ContactsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
-      @contact = Contact.find(params[:id])
+      #@contact = Contact.find(params[:id])
+      @contact = current_user.contacts.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

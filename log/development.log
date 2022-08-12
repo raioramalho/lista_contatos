@@ -8837,3 +8837,385 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 1.3ms | Allocations: 51376)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/contacts" for ::1 at 2022-08-12 19:52:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 3520)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:52:43 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 5164)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.5ms | Allocations: 6222)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 76.2ms | Allocations: 48906)
+Completed 200 OK in 80ms (Views: 76.8ms | ActiveRecord: 1.3ms | Allocations: 51134)
+
+
+Started POST "/entrar" for ::1 at 2022-08-12 19:52:46 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"thelaconic.music@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thelaconic.music@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 182ms (ActiveRecord: 2.0ms | Allocations: 6393)
+
+
+Started GET "/users/2" for ::1 at 2022-08-12 19:52:46 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3692)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 211)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 11318)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.8ms | Allocations: 12010)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:52:51 -0300
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:52:51 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2933)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 734)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 10759)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 11043)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:52:57 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 251)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.5ms | Allocations: 4842)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 14726)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 2.2ms | Allocations: 15557)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:53:01 -0300
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:53:01 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3107)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 841)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 11237)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 11878)
+
+
+Started GET "/sair" for ::1 at 2022-08-12 19:53:07 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/entrar
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1857)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:53:07 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3099)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.9ms | Allocations: 3667)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 744)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 14812)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.4ms | Allocations: 15409)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:53:08 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 86)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 1611)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 11802)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 12447)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/" for ::1 at 2022-08-12 19:56:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 491)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.7ms | Allocations: 6262)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 84.0ms | Allocations: 46794)
+Completed 200 OK in 91ms (Views: 85.1ms | ActiveRecord: 1.4ms | Allocations: 50222)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:56:15 -0300
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 2103)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:56:15 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4900)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 1598)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 14410)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 15188)
+
+
+Started POST "/entrar" for ::1 at 2022-08-12 19:56:17 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"thelaconic.music@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thelaconic.music@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 182ms (ActiveRecord: 1.8ms | Allocations: 6394)
+
+
+Started GET "/users/2" for ::1 at 2022-08-12 19:56:17 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3695)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 211)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 11321)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 12012)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:56:21 -0300
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1864)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:56:21 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2933)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 734)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 10759)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 11043)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:56:27 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 742)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 10149)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 10425)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:56:30 -0300
+Processing by ContactsController#index as HTML
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1851)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:56:30 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2892)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 10702)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.5ms | Allocations: 10968)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:58:57 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 86)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.6ms | Allocations: 4852)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 14495)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 2.2ms | Allocations: 15192)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:59:00 -0300
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2875)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 10381)
+Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 2.0ms | Allocations: 15980)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:59:08 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 739)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 10129)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 10432)
+
+
+Started GET "/sair" for ::1 at 2022-08-12 19:59:17 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/entrar
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1856)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:59:17 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 3099)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 1602)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 12632)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 13222)
+
+
+Started GET "/" for ::1 at 2022-08-12 19:59:20 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 1423)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 2.8ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 11340)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.3ms | Allocations: 11628)
+
+
+Started GET "/contacts" for ::1 at 2022-08-12 19:59:22 -0300
+Processing by ContactsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+Redirected to http://localhost:3000/entrar
+Filter chain halted as :require_logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 2504)
+
+
+Started GET "/entrar" for ::1 at 2022-08-12 19:59:22 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2891)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 1412)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 735)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 12010)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.3ms | Allocations: 12276)
+
+
