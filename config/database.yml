@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: lista_contatos_production
-  username: raio
-  password: r4nd0m 
+  username: -----
+  password: ----- 
