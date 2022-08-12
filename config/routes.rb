@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   get 'entrar', to: 'sessions#new'
   post 'entrar', to: 'sessions#create'
   get 'sair', to: 'sessions#destroy'
+
+
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :contacts
+  
+  resources :contacts 
   resources :users, only: [:new, :create, :show]
   
   
