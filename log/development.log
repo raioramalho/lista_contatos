@@ -284,3 +284,476 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.0ms | Allocations: 52430)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:45:32 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 49210)
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 0.0ms | Allocations: 52619)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:49:28 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 49154)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.0ms | Allocations: 52563)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:51:17 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 168)
+  Rendered layouts/_footer.html.erb (Duration: 12.8ms | Allocations: 13223)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 20234)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 21120)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sobre_path' for #<ActionView::Base:0x0000000000b630>
+
+        '.freeze;@output_buffer.append=( link_to 'Sobre', sobre_path );@output_buffer.safe_append='
+                                                          ^^^^^^^^^^):
+     6:   <nav>
+     7:     <ul>
+     8:       <li>
+     9:         <%= link_to 'Sobre', sobre_path %>
+    10:       </li>
+    11:       <li>
+    12:         <%= link_to 'Contato', contato_path %>
+  
+app/views/layouts/_footer.html.erb:9
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:51:42 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 9280)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 10113)
+
+
+  
+ActionView::Template::Error (Missing partial static_pages/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/header
+               active_storage/blobs/blob
+               action_text/contents/content
+               layouts/action_text/contents/content
+               action_text/attachables/remote_image
+               action_text/attachment_galleries/attachment_gallery):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render 'header' %>
+    15:     <%= yield %>
+    16: 
+    17:   </body>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:51:46 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 6850)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7698)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:52:00 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 9.2ms | Allocations: 5089)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 12071)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 12906)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000bd88>
+
+'.freeze;       if !user_signed_in? 
+                    ^^^^^^^^^^^^^^^):
+    14:   <!-- Conteudo exibido em telas maiores e que serao escondidos em telas menores -->
+    15:   <div class="collapse navbar-collapse" id="expanded-menu">
+    16:     <ul class="nav navbar-nav">
+    17:       <% if !user_signed_in? %>
+    18:         <li class="active">
+    19:           <%= link_to 'Nova Conta', cadastro_path %>
+    20:         </li>
+  
+app/views/layouts/_header.html.erb:17
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:52:30 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 186)
+  Rendered layouts/_header.html.erb (Duration: 9.1ms | Allocations: 5027)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 12057)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 12874)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000c120>
+
+      #'.freeze; if !user_signed_in? ;@output_buffer.safe_append='
+                     ^^^^^^^^^^^^^^^):
+    14:   <!-- Conteudo exibido em telas maiores e que serao escondidos em telas menores -->
+    15:   <div class="collapse navbar-collapse" id="expanded-menu">
+    16:     <ul class="nav navbar-nav">
+    17:       #<% if !user_signed_in? %>
+    18:        # <li class="active">
+    19:         #  <%= link_to 'Nova Conta', cadastro_path %>
+    20:       #  </li>
+  
+app/views/layouts/_header.html.erb:17
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:52:35 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 8.1ms | Allocations: 5023)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 12020)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 12837)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000c4b8>
+
+'.freeze;       if !user_signed_in? 
+                    ^^^^^^^^^^^^^^^):
+    14:   <!-- Conteudo exibido em telas maiores e que serao escondidos em telas menores -->
+    15:   <div class="collapse navbar-collapse" id="expanded-menu">
+    16:     <ul class="nav navbar-nav">
+    17:       <% if !user_signed_in? %>
+    18:         <li class="active">
+    19:           <%= link_to 'Nova Conta', cadastro_path %>
+    20:         </li>
+  
+app/views/layouts/_header.html.erb:17
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:53:16 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 12.7ms | Allocations: 4937)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 11933)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 12763)
+
+
+  
+ActionView::Template::Error (undefined method `user_signed_in?' for #<ActionView::Base:0x0000000000c850>
+
+'.freeze;       if !user_signed_in? 
+                    ^^^^^^^^^^^^^^^):
+    19: 
+    20:     <ul class="nav navbar-nav navbar-right">
+    21: 
+    22:       <% if !user_signed_in? %>
+    23:         <li>
+    24:           <%= link_to 'Entrar', entrar_path %>
+    25:       </li>
+  
+app/views/layouts/_header.html.erb:22
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:53:34 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7260)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 8118)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:53:39 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 6336)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 6628)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:55:04 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 7.0ms | Allocations: 4951)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 12311)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 13148)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sobre_path' for #<ActionView::Base:0x0000000000cd28>
+
+        '.freeze;@output_buffer.append=( link_to 'Sobre', sobre_path );@output_buffer.safe_append='
+                                                          ^^^^^^^^^^):
+     6:   <nav>
+     7:     <ul>
+     8:       <li>
+     9:         <%= link_to 'Sobre', sobre_path %>
+    10:       </li>
+    11:       <li>
+    12:         <%= link_to 'Contato', contato_path %>
+  
+app/views/layouts/_footer.html.erb:9
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:55:15 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 7551)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8398)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:55:34 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 8690)
+Completed 500 Internal Server Error in 11ms (Allocations: 9510)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <footer>
+  <small>
+    <%= link_to 'Contact List. Todos os direitos reservados.', root_path %>
+  </small>
+
+  <nav>
+    <ul>
+      <li>
+        <%= link_to 'Sobre', # %>
+      </li>
+      <li>
+        <%= link_to 'Contato', # %>
+      </li>
+    </ul>
+  </nav>
+</footer>
+):
+1:    <footer>
+2:      <small>
+3:        <%= link_to 'Contact List. Todos os direitos reservados.', root_path %>
+4:      </small>
+5:    
+6:      <nav>
+7:        <ul>
+8:          <li>
+9:            <%= link_to 'Sobre', # %>
+10:          </li>
+11:          <li>
+12:            <%= link_to 'Contato', # %>
+13:          </li>
+14:        </ul>
+15:      </nav>
+16:    </footer>
+  
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_footer.html.erb:10: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:13: unknown regexp option - l
+app/views/layouts/_footer.html.erb:14: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:15: unknown regexp options - av
+app/views/layouts/_footer.html.erb:16: syntax error, unexpected '<'
+app/views/layouts/_footer.html.erb:18: unterminated regexp meets end of file
+app/views/layouts/_footer.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:20
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:55:46 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 7624)
+Completed 200 OK in 12ms (Views: 11.6ms | Allocations: 8461)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:57:28 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 455.4ms | Allocations: 45070)
+Completed 200 OK in 458ms (Views: 457.5ms | Allocations: 45367)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:57:37 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 257)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7672)
+Completed 200 OK in 14ms (Views: 13.9ms | Allocations: 8498)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:57:38 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6490)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 6775)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:58:29 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 169)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 428.0ms | Allocations: 43358)
+Completed 200 OK in 431ms (Views: 429.8ms | Allocations: 44216)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:58:54 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 183)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 257)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7652)
+Completed 200 OK in 13ms (Views: 12.5ms | Allocations: 8508)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 20:59:51 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 170)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 261)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 20698)
+Completed 200 OK in 17ms (Views: 16.5ms | Allocations: 21666)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:00:20 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 153)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 7617)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 8492)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:00:27 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 174)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 8.8ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 7636)
+Completed 200 OK in 19ms (Views: 18.0ms | Allocations: 8480)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:00:30 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 174)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 7652)
+Completed 200 OK in 11ms (Views: 10.9ms | Allocations: 8496)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:00:36 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 173)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 7638)
+Completed 200 OK in 9ms (Views: 8.7ms | Allocations: 8481)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:00:55 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 7648)
+Completed 200 OK in 11ms (Views: 10.7ms | Allocations: 8491)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:01:00 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 168)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 7613)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 8456)
+
+
