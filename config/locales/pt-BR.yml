@@ -8,3 +8,12 @@ pt-BR:
       email: 'Email'
       password: 'Senha'
       password_confirmation: "Confirmação da Senha"
+
+  erros:
+    messages:
+      blank: 'Não pode estar em branco!'
+      invalid: 'Valor inválido!'
+      taken: 'Já cadastrado!'
+      confirmation: 'Não é igual, insira a mesma senha.'
+      too_long: 'Muito grande. Máximo de %{count} caracteres!'
+      too_short: 'Muito pequeno. Mínimo de %{count} caracteres!'

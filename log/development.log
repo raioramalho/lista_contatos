@@ -2798,3 +2798,343 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 7582)
 
 
+Started GET "/" for ::1 at 2022-08-12 17:52:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 491)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 310)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 37482)
+Completed 200 OK in 82ms (Views: 76.3ms | ActiveRecord: 0.0ms | Allocations: 40914)
+
+
+Started GET "/" for ::1 at 2022-08-12 17:52:33 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 86)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 7489)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7824)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:52:34 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 14.1ms | Allocations: 3257)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 4452)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 11719)
+Completed 200 OK in 34ms (Views: 23.4ms | ActiveRecord: 3.0ms | Allocations: 18479)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:52:35 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 17.6ms | Allocations: 948)
+  Rendered users/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1501)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8700)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 9033)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:00 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.0ms | Allocations: 1623)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2368)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 9735)
+Completed 200 OK in 23ms (Views: 13.2ms | ActiveRecord: 1.9ms | Allocations: 13559)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:00 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.6ms | Allocations: 943)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1478)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 8533)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 8840)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 4.3ms | Allocations: 3126)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4784)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 256)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | Allocations: 41591)
+Completed 200 OK in 96ms (Views: 79.7ms | ActiveRecord: 3.6ms | Allocations: 50979)
+
+
+Started GET "/contato" for ::1 at 2022-08-12 17:54:07 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 2.6ms | Allocations: 151)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 7691)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 8477)
+
+
+Started GET "/sobre" for ::1 at 2022-08-12 17:54:09 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 1.0ms | Allocations: 126)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 7373)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 7734)
+
+
+Started GET "/" for ::1 at 2022-08-12 17:54:10 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 190)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 7566)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 7896)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:11 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 0.9ms | Allocations: 985)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1554)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8607)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8905)
+
+
+Started GET "/" for ::1 at 2022-08-12 17:54:14 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 7274)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 7543)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:18 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.0ms | Allocations: 943)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1481)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 8531)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 8816)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:45 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.2ms | Allocations: 943)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1478)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 8533)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 8814)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 4.5ms | Allocations: 3126)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4763)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 256)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 41331)
+Completed 200 OK in 90ms (Views: 75.2ms | ActiveRecord: 2.2ms | Allocations: 50719)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:50 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 0.9ms | Allocations: 1004)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1672)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 8834)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 9193)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 5.0ms | Allocations: 3126)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 8548)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 256)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 45159)
+Completed 200 OK in 87ms (Views: 73.9ms | ActiveRecord: 2.2ms | Allocations: 54492)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:54:59 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 0.9ms | Allocations: 1004)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 3801)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 10943)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 11285)
+
+
+Started GET "/sobre" for ::1 at 2022-08-12 17:55:00 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 0.3ms | Allocations: 151)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 113)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 9838)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 10599)
+
+
+Started GET "/contato" for ::1 at 2022-08-12 17:55:02 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 0.5ms | Allocations: 129)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 9358)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 9704)
+
+
+Started GET "/" for ::1 at 2022-08-12 17:55:03 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 190)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 9418)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 9732)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:55:05 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.4ms | Allocations: 985)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3688)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 10711)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 10986)
+
+
+Started GET "/users/new" for ::1 at 2022-08-12 17:55:26 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 4.0ms | Allocations: 1775)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2284)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2379)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3217)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<div class="form-group">
+  <%= f.label :%name %>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+</div>
+):
+1:    
+2:    <div class="form-group">
+3:      <%= f.label :%name %>
+4:      <%= f.text_field :name, class: 'form-control' %>
+5:    </div>
+6:    
+7:    <div class="form-group">
+8:      <%= f.label :email %>
+9:      <%= f.email_field :email, class: 'form-control' %>
+10:    </div>
+11:    
+12:    <div class="form-group">
+13:      <%= f.label :password %>
+14:      <%= f.password_field :password, class: 'form-control' %>
+15:    </div>
+16:    
+17:    <div class="form-group">
+18:      <%= f.label :password_confirmation %>
+19:      <%= f.password_field :password_confirmation, class: 'form-control' %>
+20:    </div>
+  
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/_fields.html.erb:3: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-12 17:55:32 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.3ms | Allocations: 1268)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4389)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 12494)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 13356)
+
+
