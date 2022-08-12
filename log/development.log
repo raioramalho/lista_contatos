@@ -3406,3 +3406,408 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 11164)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/entrar" for ::1 at 2022-08-12 18:28:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5362)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 253)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 41788)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 45221)
+
+
+Started POST "/entrar" for ::1 at 2022-08-12 18:29:03 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"thelaconic.music@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thelaconic.music@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 194ms (ActiveRecord: 3.6ms | Allocations: 10329)
+
+
+Started GET "/users/2" for ::1 at 2022-08-12 18:29:03 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3703)
+  Rendered layouts/_header.html.erb (Duration: 14.5ms | Allocations: 113)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 11006)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.5ms | Allocations: 11698)
+
+
+Started GET "/users/2" for ::1 at 2022-08-12 18:29:12 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3050)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 255)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 11124)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 11857)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:21 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2734)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 9774)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 10063)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:22 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2722)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 9760)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 10027)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2722)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 9772)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 10039)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2720)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 9764)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 10031)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2720)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 9779)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 10046)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2720)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 9758)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 10025)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:24 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2720)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 9758)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.2ms | Allocations: 10025)
+
+
+Started GET "/users/1" for ::1 at 2022-08-12 18:29:25 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered users/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2722)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 9788)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.3ms | Allocations: 10056)
+
+
+Started GET "/" for ::1 at 2022-08-12 18:29:53 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 253)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 15.3ms | Allocations: 6547)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 16420)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.2ms | Allocations: 17389)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000cbc0>
+
+              '.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                       ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               <%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:               <%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+Started GET "/" for ::1 at 2022-08-12 18:30:22 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 245)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.6ms | Allocations: 6098)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 15982)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms | Allocations: 16796)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000cf80>
+
+              '.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                       ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               <%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:              # <%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+Started GET "/" for ::1 at 2022-08-12 18:30:30 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 245)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.6ms | Allocations: 6100)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 15984)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms | Allocations: 16800)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000d2f0>
+
+              #'.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                        ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               #<%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:              # <%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+Started GET "/" for ::1 at 2022-08-12 18:30:38 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 245)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.3ms | Allocations: 6100)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 15984)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 16796)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000d660>
+
+              #'.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                        ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               #<%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:               #<%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+Started GET "/" for ::1 at 2022-08-12 18:30:39 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 24.1ms | Allocations: 5587)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 14656)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms | Allocations: 14918)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000d958>
+
+              #'.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                        ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               #<%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:               #<%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from block (2 levels) in <class:Railtie> at /usr/share/rvm/gems/ruby-3.1.2/gems/activerecord-7.0.3.1/lib/active_record/railtie.rb:274)
+Started GET "/" for ::1 at 2022-08-12 18:30:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 491)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 21.7ms | Allocations: 14917)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 53923)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 2.5ms | Allocations: 57300)
+
+
+  
+ActionView::Template::Error (undefined method `user_contacts_path' for #<ActionView::Base:0x0000000000c580>
+
+              #'.freeze;@output_buffer.append=( link_to 'Minha Pagina', user_contacts_path(current_user) );@output_buffer.safe_append='
+                                                                        ^^^^^^^^^^^^^^^^^^
+Did you mean?  new_contact_path):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li>
+    37:               #<%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+    38:             </li>
+    39:             <li>
+    40:               #<%= link_to 'Editar', edit_user_path(current_user) %>
+  
+app/views/layouts/_header.html.erb:37
+app/views/layouts/application.html.erb:13
+Started POST "/__web_console/repl_sessions/c6aa0eae45ba48643adeaeff1dfb1a73/trace" for ::1 at 2022-08-12 18:30:45 -0300
+Started POST "/__web_console/repl_sessions/c6aa0eae45ba48643adeaeff1dfb1a73/trace" for ::1 at 2022-08-12 18:30:48 -0300
+Started POST "/__web_console/repl_sessions/c6aa0eae45ba48643adeaeff1dfb1a73/trace" for ::1 at 2022-08-12 18:30:49 -0300
+Started POST "/__web_console/repl_sessions/c6aa0eae45ba48643adeaeff1dfb1a73/trace" for ::1 at 2022-08-12 18:30:52 -0300
+Started GET "/" for ::1 at 2022-08-12 18:31:14 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 245)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.6ms | Allocations: 6531)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 16419)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 17282)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sair_path' for #<ActionView::Base:0x0000000000ca08>
+
+              '.freeze;@output_buffer.append=( link_to 'Sair', sair_path, method: :delete );@output_buffer.safe_append='
+                                                               ^^^^^^^^^
+Did you mean?  user_path
+               sobre_path):
+    41:             </li>
+    42:             <li class="divider" role="separator"></li>
+    43:             <li>
+    44:               <%= link_to 'Sair', sair_path, method: :delete %>
+    45:             </li>
+    46:           </ul>
+    47:         </li>
+  
+app/views/layouts/_header.html.erb:44
+app/views/layouts/application.html.erb:13
+Started GET "/" for ::1 at 2022-08-12 18:31:27 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 245)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 1221)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 11540)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 12439)
+
+
+Started GET "/" for ::1 at 2022-08-12 18:31:32 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.9ms | Allocations: 729)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 9934)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 10229)
+
+
