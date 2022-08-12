@@ -845,3 +845,332 @@ Processing by StaticPagesController#index as HTML
 Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 9452)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:20:25 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 309)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 37635)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 41039)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:20:28 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 7473)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 7808)
+
+
+Started GET "/sobre" for 127.0.0.1 at 2022-08-11 21:20:31 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 7380)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 7728)
+
+
+Started GET "/contato" for 127.0.0.1 at 2022-08-11 21:20:32 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 7357)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 7682)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:20:34 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 7276)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 7549)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:24:39 -0300
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220812002201_create_contacts.rb
+
+
+):
+  
+activerecord (7.0.3.1) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.3.1) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.3.1) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.3.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.3.1) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContacts (20220812002201)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" bigserial primary key, "name" character varying, "phone" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220812002201"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-12 00:25:10.563440"], ["updated_at", "2022-08-12 00:25:10.563440"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1255153608661143975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:25:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 309)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 37685)
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 0.0ms | Allocations: 41102)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:25:16 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 70)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 7476)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 7811)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:34:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 490)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 309)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 37886)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.0ms | Allocations: 41303)
+
+
+Started GET "/contato" for 127.0.0.1 at 2022-08-11 21:34:38 -0300
+Processing by StaticPagesController#contato as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contato.html.erb within layouts/application
+  Rendered static_pages/contato.html.erb within layouts/application (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 7581)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 7991)
+
+
+Started GET "/sobre" for 127.0.0.1 at 2022-08-11 21:34:40 -0300
+Processing by StaticPagesController#sobre as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/sobre.html.erb within layouts/application
+  Rendered static_pages/sobre.html.erb within layouts/application (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 7357)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7682)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:34:41 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 7285)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 7558)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2022-08-11 21:35:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1824)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 270)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 38503)
+Completed 200 OK in 67ms (Views: 61.4ms | ActiveRecord: 0.5ms | Allocations: 42716)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2022-08-11 21:35:52 -0300
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 10.3ms | Allocations: 4626)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4989)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 12171)
+Completed 200 OK in 25ms (Views: 16.9ms | ActiveRecord: 2.7ms | Allocations: 16138)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2022-08-11 21:36:04 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"Alan", "phone"=>"21 9-8311-0498"}, "commit"=>"Create Contact"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+  [1m[36mContact Create (0.8ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alan"], ["phone", "21 9-8311-0498"], ["created_at", "2022-08-12 00:36:04.457511"], ["updated_at", "2022-08-12 00:36:04.457511"]]
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/contacts/1
+Completed 302 Found in 14ms (ActiveRecord: 7.0ms | Allocations: 3841)
+
+
+Started GET "/contacts/1" for 127.0.0.1 at 2022-08-11 21:36:04 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:63:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/_contact.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered contacts/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1573)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 8905)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 11721)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2022-08-11 21:36:11 -0300
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/_contact.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered contacts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1085)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8128)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 8453)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2022-08-11 21:37:04 -0300
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 2.4ms | Allocations: 1072)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1180)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8245)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 8549)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2022-08-11 21:37:37 -0300
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"Ramalho", "phone"=>"21 9-6484-4381"}, "commit"=>"Create Contact"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+  [1m[36mContact Create (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ramalho"], ["phone", "21 9-6484-4381"], ["created_at", "2022-08-12 00:37:37.409966"], ["updated_at", "2022-08-12 00:37:37.409966"]]
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/contacts/2
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms | Allocations: 2390)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2022-08-11 21:37:37 -0300
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:63:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/_contact.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered contacts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 607)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 7744)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 8540)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2022-08-11 21:37:41 -0300
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:6
+  Rendered contacts/_contact.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered contacts/_contact.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered contacts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1112)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 62)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 8210)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 8488)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 21:37:55 -0300
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 247)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 7783)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 8610)
+
+
