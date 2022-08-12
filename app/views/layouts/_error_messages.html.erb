@@ -1,0 +1,12 @@
+<% if object.erros.any? %>
+    <div class="">
+    <div class="alert alert-danger">
+    Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+    <ul>
+    <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </ul>
+    </div>
+    </div>
+    <% end %>

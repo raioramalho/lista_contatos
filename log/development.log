@@ -2178,3 +2178,455 @@ Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 395
 
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Laconic"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-08-11 22:49:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 491)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 310)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 37533)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 40964)
+
+
+Started GET "/users/new" for ::1 at 2022-08-11 22:49:10 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.8ms | Allocations: 3055)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4243)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 11510)
+Completed 200 OK in 23ms (Views: 12.1ms | ActiveRecord: 2.7ms | Allocations: 18272)
+
+
+Started POST "/users" for ::1 at 2022-08-11 22:49:12 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 4.2ms | Allocations: 4052)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 4473)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 11774)
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 0.7ms | Allocations: 17118)
+
+
+Started POST "/users" for ::1 at 2022-08-11 22:49:40 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 7.6ms | Allocations: 12410)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 12911)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 13005)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 16641)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/error_messages
+               layouts/footer
+               layouts/header
+               layouts/action_text/contents/content
+               action_text/attachables/remote_image
+               contacts/form):
+    1: <%= render 'layout/error_messages', object: f.object %>
+    2: 
+    3: <div class="form-group">
+    4:   <%= f.label :name %>
+  
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+app/controllers/users_controller.rb:12:in `create'
+Started POST "/users" for ::1 at 2022-08-11 22:49:58 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.2ms | Allocations: 3213)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3699)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3793)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms | Allocations: 7570)
+
+
+  
+ActionView::Template::Error (Missing partial ./layout/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/error_messages
+               layouts/footer
+               layouts/header
+               action_text/attachables/remote_image
+               contacts/form
+               action_text/attachables/missing_attachable):
+    1: <%= render './layout/error_messages', object: f.object %>
+    2: 
+    3: <div class="form-group">
+    4:   <%= f.label :name %>
+  
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+app/controllers/users_controller.rb:12:in `create'
+Started POST "/users" for ::1 at 2022-08-11 22:50:33 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.5ms | Allocations: 3227)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3713)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3808)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 7618)
+
+
+  
+ActionView::Template::Error (Missing partial ../layouts/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/error_messages
+               layouts/footer
+               layouts/header
+               contacts/form
+               action_text/attachables/remote_image
+               contacts/contact):
+    1: <%= render '../layouts/error_messages', object: f.object %>
+    2: 
+    3: <div class="form-group">
+    4:   <%= f.label :name %>
+  
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/users" for ::1 at 2022-08-11 22:50:46 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:50:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:50:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2022-08-11 22:51:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2022-08-11 22:51:27 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.4ms | Allocations: 1273)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2248)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 10384)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 11214)
+
+
+Started GET "/users/new" for ::1 at 2022-08-11 22:51:39 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 27.3ms | Allocations: 8232)
+  Rendered users/_fields.html.erb (Duration: 28.0ms | Allocations: 8633)
+  Rendered users/new.html.erb within layouts/application (Duration: 29.2ms | Allocations: 9128)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 9222)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 10069)
+
+
+  
+ActionView::Template::Error (undefined method `erros' for #<User id: nil, email: "", name: "", password_digest: [FILTERED], created_at: nil, updated_at: nil>
+Did you mean?  errors):
+    1: <% if object.erros.any? %>
+    2:     <div class="">
+    3:     <div class="alert alert-danger">
+    4:     Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+  
+app/views/layouts/_error_messages.html.erb:1
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 22:51:46 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.1ms | Allocations: 3341)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3837)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3931)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4770)
+
+
+  
+ActionView::Template::Error (Missing partial ./layouts/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/error_messages
+               layouts/footer
+               layouts/header
+               contacts/form
+               action_text/attachables/remote_image
+               contacts/contact):
+    1: <%= render './layouts/error_messages', object: f.object %>
+    2: 
+    3: <div class="form-group">
+    4:   <%= f.label :name %>
+  
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 22:51:50 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 2.5ms | Allocations: 3315)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3811)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3905)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4744)
+
+
+  
+ActionView::Template::Error (Missing partial ../layouts/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/raio/lista_contatos/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actiontext-7.0.3.1/app/views"
+  * "/usr/share/rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.3.1/app/views"
+
+Did you mean?  layouts/error_messages
+               layouts/footer
+               layouts/header
+               contacts/form
+               action_text/attachables/remote_image
+               contacts/contact):
+    1: <%= render '../layouts/error_messages', object: f.object %>
+    2: 
+    3: <div class="form-group">
+    4:   <%= f.label :name %>
+  
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started POST "/__web_console/repl_sessions/edc6e927de485f55c2e19d7de634be09/trace" for ::1 at 2022-08-11 22:52:02 -0300
+Started POST "/__web_console/repl_sessions/edc6e927de485f55c2e19d7de634be09/trace" for ::1 at 2022-08-11 22:52:14 -0300
+Started POST "/__web_console/repl_sessions/edc6e927de485f55c2e19d7de634be09/trace" for ::1 at 2022-08-11 22:52:20 -0300
+Started POST "/__web_console/repl_sessions/edc6e927de485f55c2e19d7de634be09/trace" for ::1 at 2022-08-11 22:52:22 -0300
+Started POST "/__web_console/repl_sessions/edc6e927de485f55c2e19d7de634be09/trace" for ::1 at 2022-08-11 22:52:24 -0300
+Started GET "/users/new" for ::1 at 2022-08-11 22:52:32 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.5ms | Allocations: 1273)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2257)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 10393)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 11262)
+
+
+Started GET "/users/new" for ::1 at 2022-08-11 22:53:03 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_error_messages.html.erb (Duration: 7.5ms | Allocations: 8092)
+  Rendered users/_fields.html.erb (Duration: 8.8ms | Allocations: 8487)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 8982)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 9076)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 9921)
+
+
+  
+ActionView::Template::Error (undefined method `erros' for #<User id: nil, email: "", name: "", password_digest: [FILTERED], created_at: nil, updated_at: nil>
+Did you mean?  errors):
+    1: <% if object.erros.any? %>
+    2:     <div class="">
+    3:     <div class="alert alert-danger">
+    4:     Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+  
+app/views/users/_error_messages.html.erb:1
+app/views/users/_fields.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 22:53:18 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.8ms | Allocations: 1273)
+  Rendered users/_error_messages.html.erb (Duration: 6.0ms | Allocations: 7923)
+  Rendered users/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 9825)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 9919)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 10765)
+
+
+  
+ActionView::Template::Error (undefined method `erros' for #<User id: nil, email: "", name: "", password_digest: [FILTERED], created_at: nil, updated_at: nil>
+Did you mean?  errors):
+    1: <% if object.erros.any? %>
+    2:     <div class="">
+    3:     <div class="alert alert-danger">
+    4:     Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+  
+app/views/users/_error_messages.html.erb:1
+app/views/users/new.html.erb:9
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 22:53:23 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 1.4ms | Allocations: 1272)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2258)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 10394)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 11264)
+
+
+Started GET "/users/new" for ::1 at 2022-08-11 23:02:11 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 6.9ms | Allocations: 7927)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 8446)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 8540)
+Completed 500 Internal Server Error in 11ms (Allocations: 9377)
+
+
+  
+ActionView::Template::Error (undefined method `erros' for #<User id: nil, email: "", name: "", password_digest: [FILTERED], created_at: nil, updated_at: nil>
+Did you mean?  errors):
+    1: <% if object.erros.any? %>
+    2:     <div class="">
+    3:     <div class="alert alert-danger">
+    4:     Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+  
+app/views/layouts/_error_messages.html.erb:1
+app/views/users/new.html.erb:8
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 23:06:49 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_error_messages.html.erb (Duration: 5.5ms | Allocations: 5094)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5614)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5708)
+Completed 500 Internal Server Error in 10ms (Allocations: 6541)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<ActionView::Base:0x00000000010220>
+
+            @virtual_path = "layouts/_error_messages";; if object.erros.any? 
+                                                           ^^^^^^
+Did you mean?  object_id):
+    1: <% if object.erros.any? %>
+    2:     <div class="">
+    3:     <div class="alert alert-danger">
+    4:     Ops! Encontramos <%= pluralize(object.erros.count, 'erro', 'erros') %>
+  
+app/views/layouts/_error_messages.html.erb:1
+app/views/users/new.html.erb:9
+app/views/users/new.html.erb:7
+Started GET "/users/new" for ::1 at 2022-08-11 23:06:58 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 2.2ms | Allocations: 1272)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2248)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 10385)
+Completed 200 OK in 14ms (Views: 13.0ms | Allocations: 11244)
+
+
+Started POST "/users" for ::1 at 2022-08-11 23:07:01 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_fields.html.erb (Duration: 3.7ms | Allocations: 3742)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4108)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 63)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 11150)
+Completed 200 OK in 27ms (Views: 13.1ms | ActiveRecord: 5.0ms | Allocations: 17305)
+
+
