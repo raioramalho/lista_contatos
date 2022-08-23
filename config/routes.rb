@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root "contatos#index"
+  root to: "contacts#index"
 
   get 'sobre', to: "static_pages#sobre"
   get 'contato', to: "static_pages#contato"
